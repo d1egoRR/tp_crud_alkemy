@@ -4,7 +4,7 @@
 
 - **Crear el virtualenv y activarlo:** `python3 -m venv myvirtual`
 - **Clonar el Proyecto.**
-- **Instalar las dependencias dev:** `pip install -r requirements.txt`
+- **Instalar las dependencias:** `pip install -r requirements.txt`
 - **Migrate:** `python manage.py migrate`
 - **Crear superuser:** `python manage.py createsuperuser`
 
