@@ -1,0 +1,41 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Clientes</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+
+    <div class="container">
+
+        <a href="{% url 'crear_cliente' %}">
+            Agregar nuevo cliente
+        </a>
+
+        <br>
+        <br>
+
+        <table class="table">
+            <thead>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">DNI</th>
+            </thead>
+
+            {% for cliente in clientes %}
+                <tr>
+                    <td>{{ cliente.id }}</td>
+                    <td>{{ cliente.nombre }}</td>
+                    <td>{{ cliente.apellido }}</td>
+                    <td>{{ cliente.dni }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
+</body>
+</html>

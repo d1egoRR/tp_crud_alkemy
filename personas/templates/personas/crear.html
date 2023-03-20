@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar nuevo Cliente</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+
+    <div class="container">
+
+        <form method="post" class="form-inline">
+            {% csrf_token %}
+
+            <div class="form-group mb-2 col col-lg-6">
+                Nombre: <input type="text" name="txtNombre" class="form-control">
+                Apellido: <input type="text" name="txtApellido" class="form-control">
+                DNI: <input type="number" name="txtDni" class="form-control">
+            </div>
+
+            <input type="submit" value="Guardar" class="btn btn-primary">
+        </form>
+
+        <br><br>
+
+        <a href="{% url 'listado_cliente' %}">
+            Volver al Listado
+        </a>
+
+    </div>
+
+</body>
+</html>
